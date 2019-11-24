@@ -49,6 +49,6 @@ function animationButton(key){
    button =  document.querySelector("."+key);
    button.classList.add("pressed");
    setTimeout(function(){
-       button.classList.remove("pressed");
+       button.classList.remove("pressed"); //remove not delete
    },100)
 }
