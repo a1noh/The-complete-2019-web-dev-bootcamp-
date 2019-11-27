@@ -10,24 +10,24 @@ function nextSequence() {
     $("h1").text("Level" +level);
     var a =  Math.floor(Math.random() * 4);
     var randomChooseColor = colors[a];
-    gamePattern.push(randomChooseColor);
+    gamePattern.push(randomChooseColor); // game chooses color and uses stack to record it
     $("#level-title").text("Level " + level);
 
-    $("#" + randomChooseColor).fadeIn(100).fadeOut(100).fadeIn(100);
-    var sound = new Audio("sounds/"+randomChooseColor+".mp3");
+    $("#" + randomChooseColor).fadeIn(100).fadeOut(100).fadeIn(100); // animation
+    var sound = new Audio("sounds/"+randomChooseColor+".mp3"); //play sound
     sound.play();
 
 }
 
-$(".btn").on("click", function(event){
+$(".btn").on("click", function(event){ //on click,
         
-    var userChosenColor = $(this).attr("id");
-    userClickedPattern.push(userChosenColor);
-    $(this).fadeIn(100).fadeOut(100).fadeIn(100);
-    var sound = new Audio("sounds/"+userChosenColor+".mp3")
+    var userChosenColor = $(this).attr("id"); //get id
+    userClickedPattern.push(userChosenColor); // record the order of clicks
+    $(this).fadeIn(100).fadeOut(100).fadeIn(100); //animation
+    var sound = new Audio("sounds/"+userChosenColor+".mp3") //play sounds
     sound.play();
     // console.log(gamePattern);
-    checkAnswer(userClickedPattern.length-1);
+    checkAnswer(userClickedPattern.length-1); // check if the item is equal to the answer list
 })
 
 function checkAnswer(currentLevel){
