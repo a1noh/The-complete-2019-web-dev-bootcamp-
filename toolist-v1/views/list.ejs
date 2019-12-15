@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>To do list</title>
-    <% if (kindday === "Saturday" || kindday === "Sunday") { %>
-        <h1 style = "color: blue">It's a <%= kindday%>.</h1>
-    <%} else {%>
-        <h1 style = "color: purdple">It's a <%= kindday%>.</h1>
-    <%}%>
+    <h1><%= kindday %></h1> 
+    <ul>
+        <li>do stuff</li>
+        <li>do more stuff</li>
+        <% for (var i = 0; i < todos.length; i++){%>
+            <li><%= todos[i] %></li> 
+        <%}%>
+        
+         <form action = "/" method="POST">
+            <input type = "text" name = "todo" required>
+            <button type = "submit" name = "button">Ok</button>
+        </form>
+    </ul>
 </head>
 <body>
     
