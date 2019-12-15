@@ -1,7 +1,7 @@
 const express = require("express");
 const request = require('request');
 const bodyParser = require('body-parser');
-const api = require(__dirname + "/api.js");
+const api = require(__dirname + "/ignore/api.js");
 
 app = express();
 app.use(bodyParser.urlencoded({extended: true}));
