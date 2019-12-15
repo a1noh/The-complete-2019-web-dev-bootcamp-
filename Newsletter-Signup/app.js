@@ -33,7 +33,7 @@ app.post("/", function(req, res){
         url : api.getApi(),
         method : "POST",
         headers : {
-            "Authorization" : "noh1 ad4c49d6c4a37096c803e4d5a0991abd-us4"
+            "Authorization" : api.getid(),
         },
         body: jasonData // parameter for our api    
     }
