@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>To do list</title>
-    <h1>It's a <%= kindday%>!</h1>
+    <% if (kindday === "Saturday" || kindday === "Sunday") { %>
+        <h1 style = "color: blue">It's a <%= kindday%>.</h1>
+    <%} else {%>
+        <h1 style = "color: purdple">It's a <%= kindday%>.</h1>
+    <%}%>
 </head>
 <body>
     
