@@ -1,6 +1,8 @@
 const express = require("express");
 const request = require('request');
 const bodyParser = require('body-parser');
+const api = require(__dirname + "/api.js");
+
 app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -28,7 +30,7 @@ app.post("/", function(req, res){
    // console.log(first + last + email);
 
     var option = {
-        url : 'https://us4.api.mailchimp.com/3.0/lists/acb2e3618e',
+        url : api.getApi(),
         method : "POST",
         headers : {
             "Authorization" : "noh1 ad4c49d6c4a37096c803e4d5a0991abd-us4"
